@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>免责声明 - 粉云资源中心</title>
+    <title>免责声明 - 粉云资源中心 | Disclaimer - Pink Cloud Resource Center</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -46,6 +46,28 @@
         strong {
             color: #2c3e50;
         }
+        .language-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .language-switch button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .language-switch button.active {
+            background-color: #2980b9;
+        }
+        .language-content {
+            display: none;
+        }
+        .language-content.active {
+            display: block;
+        }
         .back-button {
             display: block;
             width: 120px;
@@ -69,50 +91,108 @@
 </head>
 <body>
     <div class="container">
-        <h1>免责声明</h1>
-        
-        <p>欢迎使用粉云资源中心（以下简称“本网站”）。</p>
-        
-        <p>请在使用本网站前仔细阅读以下条款。使用本网站即表示您同意遵守这些条款。</p>
+        <div class="language-switch">
+            <button id="zh-button" class="active">中文</button>
+            <button id="en-button">English</button>
+        </div>
 
-        <h2>一、资源使用说明</h2>
-        <ol>
+        <h1 id="title-zh" class="language-content active">免责声明</h1>
+        <h1 id="title-en" class="language-content">Disclaimer</h1>
+        
+        <p id="welcome-zh" class="language-content active">欢迎使用粉云资源中心（以下简称“本网站”）。</p>
+        <p id="welcome-en" class="language-content">Welcome to the Pink Cloud Resource Center (hereinafter referred to as "this Website").</p>
+        
+        <p id="terms-zh" class="language-content active">请在使用本网站前仔细阅读以下条款。使用本网站即表示您同意遵守这些条款。</p>
+        <p id="terms-en" class="language-content">Please read the following terms carefully before using this Website. Using this Website means that you agree to comply with these terms.</p>
+
+        <h2 id="resource-title-zh" class="language-content active">一、资源使用说明</h2>
+        <h2 id="resource-title-en" class="language-content">I. Resource Usage Instructions</h2>
+        <ol id="resource-content-zh" class="language-content active">
             <li><strong>资源性质</strong>：本网站所提供的所有资源均为用户自发上传，仅用于学习交流目的，不代表本站立场。</li>
-            <li><strong>禁止商业用途</strong>：下载内容仅供参考和学习，未经版权所有者明确同意书面，不得用于商业用途或以任何其他方式用于商业目的。</li>
+            <li><strong>禁止商业用途</strong>：下载内容仅供参考和学习，未经版权所有者明确书面同意，不得用于商业用途或以任何其他方式用于商业目的。</li>
             <li><strong>版权归属</strong>：本站不拥有资源的版权，版权归原作者所有。如涉及侵权，请联系我们删除。</li>
         </ol>
+        <ol id="resource-content-en" class="language-content">
+            <li><strong>Nature of Resources</strong>：All resources provided by this Website are uploaded by users spontaneously and are for learning and communication purposes only. They do not represent the stance of this site.</li>
+            <li><strong>Prohibition of Commercial Use</strong>：Downloaded content is for reference and learning purposes only. Without the explicit written consent of the copyright owner, it shall not be used for commercial purposes or in any other manner for commercial objectives.</li>
+            <li><strong>Copyright Attribution</strong>：This site does not own the copyright of the resources, which belongs to the original author. In case of infringement, please contact us for removal.</li>
+        </ol>
 
-        <h2>二、免责声明</h2>
-        <ol>
+        <h2 id="disclaimer-title-zh" class="language-content active">二、免责声明</h2>
+        <h2 id="disclaimer-title-en" class="language-content">II. Disclaimer</h2>
+        <ol id="disclaimer-content-zh" class="language-content active">
             <li><strong>资源合法性</strong>：本站不对用户上传的资源的合法性承担责任。用户应确保所上传的资源不侵犯他人权益，否则由此产生的法律责任由上传者自行承担。</li>
             <li><strong>下载风险</strong>：使用本站资源产生的一切后果由使用者自行承担，与本站无关。本站无法保证资源的绝对安全性和准确性，用户在下载和使用过程中需自行判断和承担风险。</li>
             <li><strong>链接内容</strong>：本站可能包含第三方网站的链接，仅作为参考和便利提供。本站对第三方网站的内容、产品或服务不承担任何责任。</li>
             <li><strong>内容准确性</strong>：本站尽力确保所提供信息的准确性，但不排除存在错误或过时信息的可能。用户应对所获取的信息进行甄别和验证。</li>
         </ol>
-
-        <h2>三、违反条款的处理</h2>
-        <ol>
-            <li><strong违规>行为</strong>：如发现用户违反上述条款，本站有权采取包括但不限于删除资源、限制账户访问、追究法律责任等措施。</li>
-            <li><strong>举报机制</strong>：鼓励用户对侵权或违规行为进行举报，我们将在核实后及时处理。</li>
+        <ol id="disclaimer-content-en" class="language-content">
+            <li><strong>Legality of Resources</strong>：This site does not assume responsibility for the legality of resources uploaded by users. Users should ensure that the uploaded resources do not infringe upon the rights of others. Otherwise, the uploader shall bear the corresponding legal liability.</li>
+            <li><strong>Download Risks</strong>：Any consequences arising from the use of resources on this site shall be borne by the user. This site shall not be liable therefor. This site cannot guarantee the absolute security and accuracy of the resources. Users should exercise their own judgment and assume the risks during the process of downloading and using the resources.</li>
+            <li><strong>Linked Content</strong>：This site may contain links to third-party websites, which are provided for reference and convenience only. This site shall not assume any responsibility for the content, products, or services of third-party websites.</li>
+            <li><strong>Accuracy of Content</strong>：This site endeavors to ensure the accuracy of the information provided but does not exclude the possibility of errors or outdated information. Users should verify the information obtained.</li>
         </ol>
 
-        <h2>四、联系方式</h2>
-        <p>如需删除内容，请联系管理员。联系邮箱：<span class="highlight">[管理员邮箱]</span></p>
+        <h2 id="violations-title-zh" class="language-content active">三、违反条款的处理</h2>
+        <h2 id="violations-title-en" class="language-content">III. Handling of Violations</h2>
+        <ol id="violations-content-zh" class="language-content active">
+            <li><strong>违规行为</strong>：如发现用户违反上述条款，本站有权采取包括但不限于删除资源、限制账户访问、追究法律责任等措施。</li>
+            <li><strong>举报机制</strong>：鼓励用户对侵权或违规行为进行举报，我们将在核实后及时处理。</li>
+        </ol>
+        <ol id="violations-content-en" class="language-content">
+            <li><strong>Violations</strong>：If users are found to have violated the above terms, this site reserves the right to take measures, including but not limited to deleting resources, restricting account access, and pursuing legal liability.</li>
+            <li><strong>Reporting Mechanism</strong>：Users are encouraged to report any infringing or violating behavior. We will promptly handle the reports upon verification.</li>
+        </ol>
 
-        <p><strong>重要提示：</strong>以上条款受中华人民共和国法律管辖，用户在使用本网站时，即视为同意并遵守中华人民共和国法律。若因使用本网站产生争议，双方应友好协商解决；协商不成的，任一方均可向本站运营主体住所地有管辖权的人民法院提起诉讼。</p>
+        <h2 id="contact-title-zh" class="language-content active">四、联系方式</h2>
+        <h2 id="contact-title-en" class="language-content">IV. Contact Information</h2>
+        <p id="contact-content-zh" class="language-content active">如需删除内容，请联系管理员。联系邮箱：<span class="highlight">[管理员邮箱]</span></p>
+        <p id="contact-content-en" class="language-content">If you need to request the removal of content, please contact the administrator. Contact email: <span class="highlight">[Administrator Email]</span></p>
 
-        <a href="#" class="back-button">返回顶部</a>
-    </div>
+        <h2 id="legal-title-zh" class="language-content active">五、法律声明</h2>
+        <h2 id="legal-title-en" class="language-content">V. Legal Statement</h2>
+        <p id="legal-content-zh" class="language-content active"><strong>重要提示</strong>：这些条款受国际规则和法律管辖。用户在使用本网站时，即视为同意遵守适用的国际规则和法律。若因使用本网站产生争议，双方应友好协商解决；协商不成的，双方可以自行选择通过仲裁或其他法律途径解决。</p>
+        <p id="legal-content-en" class="language-content"><strong>Governing Law and Jurisdiction:</strong> These terms are governed by international rules and laws. By using this Website, users agree to comply with applicable international rules and laws. In the event of any dispute arising from the use of this Website, the parties shall endeavor to resolve the dispute through friendly consultation. If the consultation fails, the parties may choose to resolve the dispute through arbitration or other legal means.</p>
 
-    <script>
-        // 返回顶部按钮功能
-        document.querySelector('.back-button').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+        <a href="#" class="back-button" id="back-button-zh" class="language-content active">返回顶部</a>
+        <a href="#" class="back-button" id="back-button-en" class="language-content">Back to Top</a>
+
+        <script>
+            // 语言切换功能
+            document.getElementById('zh-button').addEventListener('click', function() {
+                document.getElementById('zh-button').classList.add('active');
+                document.getElementById('en-button').classList.remove('active');
+                switchLanguage('zh');
             });
-        });
-    </script>
+
+            document.getElementById('en-button').addEventListener('click', function() {
+                document.getElementById('en-button').classList.add('active');
+                document.getElementById('zh-button').classList.remove('active');
+                switchLanguage('en');
+            });
+
+            function switchLanguage(lang) {
+                const elements = document.querySelectorAll('.language-content');
+                elements.forEach(element => {
+                    if (element.id.endsWith('-' + lang)) {
+                        element.classList.add('active');
+                    } else {
+                        element.classList.remove('active');
+                    }
+                });
+            }
+
+            // 返回顶部按钮功能
+            document.querySelectorAll('.back-button').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+    </div>
 </body>
 </html>
